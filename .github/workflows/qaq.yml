@@ -1,0 +1,23 @@
+name: Test Actions
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  qaq-jobs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Print a message
+        run: echo "Hello, this is a test of GitHub Actions!"
+
+      - name: Print the current branch name  # 打印当前分支名称
+        run: echo "You are currently on branch: ${{ github.ref_name }}"
+
+      - name: List files in the repository  
+        run: ls -la
