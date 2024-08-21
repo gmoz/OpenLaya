@@ -16,9 +16,5 @@ jobs:
       - name: Print a message
         run: echo "Hello, this is a test of GitHub Actions!"
 
-      - name: Print the current branch name
-        run:
-          echo "You are currently on branch: ${{ github.ref_name }}"
-
       - name: List files in the repository
         run: ls -la
